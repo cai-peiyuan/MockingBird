@@ -1,9 +1,11 @@
+> 🚧 While I no longer actively update this repo, you can find me continuously pushing this tech forward to good side and open-source. I'm also building an optimized and cloud hosted version: https://noiz.ai/ and it's free but not ready for commersial use now.
+>
 ![mockingbird](https://user-images.githubusercontent.com/12797292/131216767-6eb251d6-14fc-4951-8324-2722f0cd4c63.jpg)
 
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://choosealicense.com/licenses/mit/)
 
-> English | [中文](README-CN.md)
+> English | [中文](README-CN.md)| [中文Linux](README-LINUX-CN.md)
 
 ## Features
 🌍 **Chinese** supported mandarin and tested with multiple datasets: aidatatang_200zh, magicdata, aishell3, data_aishell, and etc.
@@ -29,6 +31,7 @@
 > If you get an `ERROR: Could not find a version that satisfies the requirement torch==1.9.0+cu102 (from versions: 0.1.2, 0.1.2.post1, 0.1.2.post2 )` This error is probably due to a low version of python, try using 3.9 and it will install successfully
 * Install [ffmpeg](https://ffmpeg.org/download.html#get-packages).
 * Run `pip install -r requirements.txt` to install the remaining necessary packages.
+> The recommended environment here is `Repo Tag 0.0.1` `Pytorch1.9.0 with Torchvision0.10.0 and cudatoolkit10.2` `requirements.txt` `webrtcvad-wheels` because `requirements. txt` was exported a few months ago, so it doesn't work with newer versions
 * Install webrtcvad `pip install webrtcvad-wheels`(If you need)
 
 or
@@ -115,7 +118,7 @@ You can either train your models or use existing ones:
 Allowing parameter `--dataset {dataset}` to support aidatatang_200zh, magicdata, aishell3, data_aishell, etc.If this parameter is not passed, the default dataset will be aidatatang_200zh.
 
 * Train the synthesizer:
-`python synthesizer_train.py mandarin <datasets_root>/SV2TTS/synthesizer`
+`python train.py --type=synth mandarin <datasets_root>/SV2TTS/synthesizer`
 
 * Go to next step when you see attention line show and loss meet your need in training folder *synthesizer/saved_models/*.
 
@@ -126,7 +129,7 @@ Allowing parameter `--dataset {dataset}` to support aidatatang_200zh, magicdata,
 | --- | ----------- | ----- |----- |
 | @author | https://pan.baidu.com/s/1iONvRxmkI-t1nHqxKytY3g  [Baidu](https://pan.baidu.com/s/1iONvRxmkI-t1nHqxKytY3g) 4j5d  |  | 75k steps trained by multiple datasets
 | @author | https://pan.baidu.com/s/1fMh9IlgKJlL2PIiRTYDUvw  [Baidu](https://pan.baidu.com/s/1fMh9IlgKJlL2PIiRTYDUvw) code：om7f  |  | 25k steps trained by multiple datasets, only works under version 0.0.1
-|@FawenYo | https://yisiou-my.sharepoint.com/:u:/g/personal/lawrence_cheng_yisiou_onmicrosoft_com/EWFWDHzee-NNg9TWdKckCc4BC7bK2j9cCbOWn0-_tK0nOg?e=Cc4EFA https://u.teknik.io/AYxWf.pt  | [input](https://github.com/babysor/MockingBird/wiki/audio/self_test.mp3) [output](https://github.com/babysor/MockingBird/wiki/audio/export.wav) | 200k steps with local accent of Taiwan, only works under version 0.0.1
+|@FawenYo | https://yisiou-my.sharepoint.com/:u:/g/personal/lawrence_cheng_fawenyo_onmicrosoft_com/EWFWDHzee-NNg9TWdKckCc4BC7bK2j9cCbOWn0-_tK0nOg?e=n0gGgC  | [input](https://github.com/babysor/MockingBird/wiki/audio/self_test.mp3) [output](https://github.com/babysor/MockingBird/wiki/audio/export.wav) | 200k steps with local accent of Taiwan, only works under version 0.0.1
 |@miven| https://pan.baidu.com/s/1PI-hM3sn5wbeChRryX-RCQ code: 2021 https://www.aliyundrive.com/s/AwPsbo8mcSP code: z2m0 | https://www.bilibili.com/video/BV1uh411B7AD/ | only works under version 0.0.1
 
 #### 2.4 Train vocoder (Optional)
